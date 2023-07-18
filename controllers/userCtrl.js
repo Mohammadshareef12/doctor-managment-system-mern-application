@@ -19,13 +19,16 @@ const registerController = async (reg, res) => {
         res.status(201).send({message: "Registaration sucessfully", sucess:true});
     } catch (error) {
         console.log(error)
-        res.status(500).send({success:false, message: `Register controller ${error.message}`})   
+        res.status(500)
+        .send({
+            success:false, 
+            message: `Register controller ${error.message}`,
+        })   
     }
 }
 
 
 const loginController = () => {}
-const registerController = () => {}
 
 
-module.exports = {loginController, registerController}
+module.exports = {loginController, registerController};
